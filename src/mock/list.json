@@ -1,0 +1,227 @@
+{
+  "content": {
+    "data": {
+      "isLogin": false,
+      "page": {
+        "pageSize": 15,
+        "start": "15",
+        "result": [{
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3893102,
+          "positionName": "SEM主管-9",
+          "city": "上海",
+          "createTime": "今天 11:10",
+          "salary": "10k-15k",
+          "companyId": 46605,
+          "companyLogo": "i/image2/M00/35/6C/CgoB5lpEjN6ALjTlAABTba17HJg551.png",
+          "companyName": "VIP陪练",
+          "companyFullName": "上海妙克信息科技有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3920452,
+          "positionName": "公关/媒介专员或主管",
+          "city": "上海",
+          "createTime": "今天 11:10",
+          "salary": "12k-17k",
+          "companyId": 46605,
+          "companyLogo": "i/image2/M00/35/6C/CgoB5lpEjN6ALjTlAABTba17HJg551.png",
+          "companyName": "VIP陪练",
+          "companyFullName": "上海妙克信息科技有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3884012,
+          "positionName": "嵌入式软件开发",
+          "city": "北京",
+          "createTime": "今天 11:05",
+          "salary": "15k-25k",
+          "companyId": 1650,
+          "companyLogo": "i/image/M00/01/59/Cgp3O1Zn9kCAAW4jAABX8W4A-fw360.jpg",
+          "companyName": "联想集团",
+          "companyFullName": "联想（北京）有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3902314,
+          "positionName": "NPI PM",
+          "city": "上海",
+          "createTime": "今天 11:05",
+          "salary": "15k-20k",
+          "companyId": 1650,
+          "companyLogo": "i/image/M00/01/59/Cgp3O1Zn9kCAAW4jAABX8W4A-fw360.jpg",
+          "companyName": "联想集团",
+          "companyFullName": "联想（北京）有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 4003269,
+          "positionName": "技术支持工程师",
+          "city": "杭州",
+          "createTime": "今天 11:03",
+          "salary": "4k-6k",
+          "companyId": 21603,
+          "companyLogo": "i/image2/M01/7D/8C/CgoB5lt2cRuAIIvyAAAMQH6qiLw911.jpg",
+          "companyName": "星际网络56iq",
+          "companyFullName": "星际（杭州）网络技术有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3878451,
+          "positionName": "产品实习生",
+          "city": "北京",
+          "createTime": "今天 11:02",
+          "salary": "2k-4k",
+          "companyId": 116093,
+          "companyLogo": "i/image2/M00/45/8E/CgoB5lrQSK6AFO3nAAA8L-KQi-0263.png",
+          "companyName": "Castbox",
+          "companyFullName": "克鲁（北京）网络科技有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3895233,
+          "positionName": "平面设计实习生",
+          "city": "北京",
+          "createTime": "今天 11:02",
+          "salary": "3k-6k",
+          "companyId": 116093,
+          "companyLogo": "i/image2/M00/45/8E/CgoB5lrQSK6AFO3nAAA8L-KQi-0263.png",
+          "companyName": "Castbox",
+          "companyFullName": "克鲁（北京）网络科技有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3867235,
+          "positionName": "电商运营专员",
+          "city": "苏州",
+          "createTime": "今天 11:01",
+          "salary": "4k-6k",
+          "companyId": 88266,
+          "companyLogo": "image1/M00/41/CB/CgYXBlXJmNiAXyXGAAAK2MS8Z1M661.png",
+          "companyName": "妈妈好",
+          "companyFullName": "昆山妈妈好网络技术有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3902852,
+          "positionName": "移动端高级产品经理",
+          "city": "上海",
+          "createTime": "今天 11:00",
+          "salary": "20k-35k",
+          "companyId": 66311,
+          "companyLogo": "i/image/M00/00/15/CgqKkVYoclCAL00BAAAQn7lN1qo093.jpg",
+          "companyName": "方付通",
+          "companyFullName": "上海方付通商务服务有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3902865,
+          "positionName": "高级产品经理 ( 电商方向 )",
+          "city": "上海",
+          "createTime": "今天 11:00",
+          "salary": "20k-35k",
+          "companyId": 66311,
+          "companyLogo": "i/image/M00/00/15/CgqKkVYoclCAL00BAAAQn7lN1qo093.jpg",
+          "companyName": "方付通",
+          "companyFullName": "上海方付通商务服务有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3875565,
+          "positionName": "UI设计师",
+          "city": "深圳",
+          "createTime": "今天 11:00",
+          "salary": "10k-20k",
+          "companyId": 107664,
+          "companyLogo": "i/image/M00/73/04/Cgp3O1gteKCAMVdbAAApNp8Trz8758.png",
+          "companyName": "AKULAKU",
+          "companyFullName": "岩心科技（深圳）有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 4011061,
+          "positionName": "电商运营经理",
+          "city": "深圳",
+          "createTime": "今天 11:00",
+          "salary": "25k-40k",
+          "companyId": 107664,
+          "companyLogo": "i/image/M00/73/04/Cgp3O1gteKCAMVdbAAApNp8Trz8758.png",
+          "companyName": "AKULAKU",
+          "companyFullName": "岩心科技（深圳）有限公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3895282,
+          "positionName": "技术支持--英语熟练（苏州IBM）",
+          "city": "苏州",
+          "createTime": "今天 10:59",
+          "salary": "4k-5k",
+          "companyId": 16831,
+          "companyLogo": "i/image2/M01/89/09/CgoB5luSLPSAGf4tAABGs-BTn78740.png",
+          "companyName": "武汉佰钧成技术有限公司",
+          "companyFullName": "武汉佰钧成技术有限责任公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 3911660,
+          "positionName": "英语客服（英语熟练--外派IBM）",
+          "city": "深圳",
+          "createTime": "今天 10:59",
+          "salary": "4k-5k",
+          "companyId": 16831,
+          "companyLogo": "i/image2/M01/89/09/CgoB5luSLPSAGf4tAABGs-BTn78740.png",
+          "companyName": "武汉佰钧成技术有限公司",
+          "companyFullName": "武汉佰钧成技术有限责任公司"
+        }, {
+          "logger": {
+            "traceCapable": true,
+            "name": "com.lagou.entity.mobile.MobilePosition"
+          },
+          "positionId": 4004503,
+          "positionName": "JAVA高级工程师",
+          "city": "武汉",
+          "createTime": "今天 10:59",
+          "salary": "8k-16k",
+          "companyId": 205821,
+          "companyLogo": "i/image/M00/92/E1/CgpEMlsGhGGAIIKFAABvB4Q_Iuc092.png",
+          "companyName": "武汉烧麦财播科技有限公司",
+          "companyFullName": "武汉烧麦财播科技有限公司"
+        }],
+        "totalCount": "320802",
+        "pageNo": 2
+      }
+    },
+    "rows": []
+  },
+  "message": "第2页数据,每页15条, 查询成功!",
+  "state": 1
+}
