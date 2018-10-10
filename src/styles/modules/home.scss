@@ -16,12 +16,57 @@
     @include flexbox();
     @include flex-direction(column);
     header {
-      height: .44rem;
-      background: #00b38a;
-      color: #fff;
-      font-size: .18rem;
-      line-height: .44rem;
-      text-align: center;
+      height: .73rem;
+      background: #fff;
+      color:#666;
+      font-size: .13rem;
+      width: 100%;
+      .mob-header-content{
+        height: .41rem;
+        @include flexbox();
+        padding: .056rem .13rem .05rem .09rem;
+        position: relative;
+        .logo{
+          float: left;
+          height: .29rem;
+          span{
+            display: inline-block;
+            width:.83rem;
+            height:.21rem;
+            margin-top: .06rem;
+            background: url("../images/logo.png") no-repeat center center;
+            background-size: cover;
+          }
+        }
+        .search-from{
+          float: left;
+          width: 8.25rem;
+          width: 1.93rem;
+          margin: 0 .07rem;
+          p{
+            width: 1.93rem;
+            height: .29rem;
+            background-color: #eee;
+            text-align: center;
+            line-height: .29rem;
+          }
+        }
+        .location{
+          position: absolute;
+          top: .056rem;
+          right: .13rem;
+          height: .29rem;
+          padding-top: .07rem;
+          span{
+            width: .44rem;
+            height: .14rem;
+            display: block;
+            font-size: .14rem;
+            color: #000;
+            border-radius: 4px;
+          }
+        }
+      }
     }
     main {
       @include flex()

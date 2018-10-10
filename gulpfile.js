@@ -64,6 +64,11 @@ gulp.task("copyicons",()=>{
             .pipe(gulp.dest("./dev/iconfonts"))
 })
 
+gulp.task("copyimages",()=>{
+    return gulp.src("./src/images/**/*")
+            .pipe(gulp.dest("./dev/images"))
+})
+
 gulp.task("server",()=>{
     return gulp.src("./dev")
             .pipe(server({
@@ -94,9 +99,12 @@ gulp.task("watch",()=>{
     watch("./src/libs/**/*",()=>{
         gulp.start(['copylibs'])
     })
+    watch("./src/images/**/*",()=>{
+        gulp.start(['copyimages'])
+    })
     gulp.watch("./src/scripts/**/*",["packjs"])
 })
 
-gulp.task("default",["copyhtml","packjs","copylibs","copymock","copyicons","packscss","watch","server"],()=>{
+gulp.task("default",["copyhtml","packjs","copylibs","copymock","copyimages","copyicons","packscss","watch","server"],()=>{
     console.log("all OK");
 })
