@@ -1,0 +1,20 @@
+git常用命令
+  clone指定分支的工程：
+  git clone -b 分支名 git地址
+  分支推送
+  git push -u origin(已经在development)
+  git branch 分支 --创建
+  git checkout 分支 --切换
+
+使用流程
+  1、加入你是xiaohu，先克隆development分支的内容--git clone -b development https://github.com/WXQwork/Beautifullele.git 
+  2、创建自己的分支--git checkout -b feature-hu development（你可以在自己的分支上随便操作 add * & commit）
+  3、切换回development分支--git checkout development & git pull origin development
+  4、更新远端的代码查看de分支是否有更新，无冲突合并de分支到自己的分支（有冲突解决冲突再合并）--git checkout feature-hu & git merge development
+  5、最后完成功能再把自己的代码合并到de分支--git checkout development & git merge --no-ff feature-hu
+  6、推送de分支到git上--git push origin development 
+vim编译器
+  I--切换到插入状态
+  ESC :WQ保存并退出(x)
+  ESC :q文本没有保存并退出
+  car--查看内容
