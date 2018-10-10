@@ -11,7 +11,7 @@ git常用命令
   2、创建自己的分支--git checkout -b feature-hu development（你可以在自己的分支上随便操作 add * & commit）
   3、切换回development分支--git checkout development & git pull origin development
   4、更新远端的代码查看de分支是否有更新，无冲突合并de分支到自己的分支（有冲突解决冲突再合并）--git checkout feature-hu & git merge development
-  5、最后完成功能再把自己的代码合并到de分支--git checkout development & git merge --no-ff feature-hu
+  5、最后完成功能再把自己的代码合并到de分支
   6、推送de分支到git上--git push origin development 
 vim编译器
   I--切换到插入状态
