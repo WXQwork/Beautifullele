@@ -1,12 +1,9 @@
 import Router from "./utils/router"
-import homeController from './controllers/home'
 import positionController from './controllers/position'
 import searchController from './controllers/search'
 import profileController from './controllers/profile'
 import adminController from './controllers/admin'
 import newGoodsController from './controllers/new-goods'
-
-homeController.render();
 
 const router = new Router()
 router.init()

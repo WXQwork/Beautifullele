@@ -1,7 +1,7 @@
 import profileTpl from '../views/profile.html'
 
 const render = () => {
-  $('main').html(profileTpl)
+  $('#root').html(profileTpl)
 }
 
 export default {
