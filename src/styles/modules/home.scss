@@ -81,11 +81,38 @@
           }
         }
       }
+      .mob-header-nav{
+        height: .32rem;
+        width: 100%;
+        overflow-x: hidden;
+        font-weight: normal;
+        ul{
+          display: block;
+          width: 4.72rem;
+          li{
+            float: left;
+            height: .32rem;
+            line-height: .32rem;
+            margin: 0 .11rem;
+            // &.active{
+            //   a{
+            //     color: #000;
+            //   }
+            //   @include border(0 0 3px 0);
+            // }
+            a{
+              font-size: .14rem;
+              color: #333;
+              font-weight: 100;
+            }
+          }
+        }
+      }
     }
     main {
       @include flex()
     }
-    nav {
+    .navfooter {
       height: .57rem;
       background: #fff;
       // border-top: solid 1px #ccc;
