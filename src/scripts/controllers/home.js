@@ -7,7 +7,7 @@ const render=()=>{
 
 const changeTab =()=>{
     $("nav li").on("tap",function(){
-        let hashs = ['#position', '#search', '#profile']
+        let hashs = ['#position', '#search', '#profile','#admin']
         location.hash = hashs[$(this).index()]
         $(this).addClass('active').siblings().removeClass('active')
     })

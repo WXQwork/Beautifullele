@@ -21,7 +21,7 @@ Router.prototype.refresh = function () {
 
 // tabbar switch
 Router.prototype.switchTabbar = function () {
-  let hashs = ['#position', '#search', '#profile']
+  let hashs = ['#position', '#search', '#profile','#admin']
   let index = hashs.indexOf(this.currentHash)
   $('nav li')
     .eq(index)
