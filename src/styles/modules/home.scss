@@ -40,15 +40,30 @@
         }
         .search-from{
           float: left;
-          width: 8.25rem;
+          height: .29rem;
           width: 1.93rem;
           margin: 0 .07rem;
           p{
             width: 1.93rem;
             height: .29rem;
+            color: #aaa;
             background-color: #eee;
             text-align: center;
             line-height: .29rem;
+            font-size: .13rem;
+            overflow: hidden;
+            @include border-radius(4px);
+            &::before{
+              content: '';
+              display: inline-block;
+              width: .14rem;
+              height: .14rem;
+              margin-top: .07rem;
+              margin-right: .01rem;
+              vertical-align: top;
+              background: url("../images/search.png") no-repeat 0;
+              background-size: contain;
+            }
           }
         }
         .location{
@@ -63,7 +78,6 @@
             display: block;
             font-size: .14rem;
             color: #000;
-            border-radius: 4px;
           }
         }
       }
@@ -72,8 +86,8 @@
       @include flex()
     }
     nav {
-      height: .44rem;
-      background: #f6f6f6;
+      height: .57rem;
+      background: #fff;
       // border-top: solid 1px #ccc;
       @include border(1px 0 0 0);
       ul {
@@ -84,14 +98,19 @@
           @include flexbox();
           @include justify-content(center);
           @include align-items(center);
+          @include flex-direction(column);
           font-size: .18rem;
-          color: #c2cfcc;
+          color:#333;
           b {
             font-weight: 100;
+            font-size: .13rem;
+            color: #333;
           }
           &.active {
-            color: #00b38a;
-            background: #e7f3f0;
+            color: #c81c28;
+            b{
+              color: #c81c28;
+            }
           }
         }
       }
