@@ -1,0 +1,87 @@
+#root{
+    .profilemain{
+        @include flexbox();
+        @include flex-direction(column);
+        height: 100%;
+        .mll-header{
+            height: .45rem;
+            width: 100%;
+            @include border(0 0 1px 0);
+            background-color: #fff;
+            .viewport{
+                height: .37rem;
+                width: 100%;
+                @include flexbox();
+                @include justify-content(space-between);
+                .laye-back{
+                    width: .40rem;
+                    height: .37rem;
+                    padding-left: .15rem;
+                    line-height: .37rem;
+                    i{
+                        font-size: .22rem;
+                        font-weight: 700;
+                        color: #333;
+                    }
+                }
+                .laye-middle{
+                    @include flex();
+                    height: .37rem;
+                    padding-top: .07rem;
+                    text-align: center;
+                    line-height: .30rem;
+                    font-size: .18rem;
+                    color: #333;
+                    font-weight: 700;
+                }
+                .laye-nav{
+                    width: .36rem;
+                    height: .37rem;
+                    line-height: .37rem;
+                    padding-right: .15rem;
+                    i{
+                        font-size: .22rem;
+                        font-weight: 700;
+                        color: #333;
+                    }
+                }
+            }
+        }
+        .mll-main{
+            @include flex();
+        }
+        .mll-footer{
+            height:1.21rem;
+            padding-top: .3rem;
+            width: 100%;
+            background: #414141;
+            .btns{
+                margin-bottom: .18rem;
+                height: .32rem;
+                @include flexbox();
+                @include justify-content(center);
+                div{
+                    width: .86rem;
+                    height: .32rem;
+                    @include border();
+                    @include border-radius(4px);
+                    text-align: center;
+                    line-height: .32rem;
+                    color: #fff;
+                    font-size: .14rem;
+                }
+                .btns-app{
+                    margin-right: .23rem;
+                }
+            }
+            .icp{
+                text-align: center;
+                height: .23rem;
+                p{
+                    font-size: .10rem;
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}
