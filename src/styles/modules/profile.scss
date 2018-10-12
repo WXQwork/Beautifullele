@@ -41,7 +41,7 @@
                     padding-right: .15rem;
                     i{
                         font-size: .22rem;
-                        font-weight: 700;
+                        font-weight: 100;
                         color: #333;
                     }
                 }
@@ -49,6 +49,56 @@
         }
         .mll-main{
             @include flex();
+            width: 100%;
+            .mll-main-header{
+                height: .45rem;
+                padding-top: .11rem;
+                padding-bottom: .11rem;
+                background-color: #fff;
+                width: 100%;
+                @include border(0 0 1px 0);
+                @include flexbox();
+                @include justify-content(center);
+                a{
+                    display: inline-block;
+                    width: .52rem;
+                    height: .23rem;
+                    color: #da0000;
+                    text-align: center;
+                    line-height: .23rem;
+                    font-size: .13rem;
+                    @include border(1px,#da0000,solid,2px);
+                    @include border-radius(10px);
+                }
+                span{
+                    height: .23rem;
+                    line-height: .23rem;
+                    margin-left: .05rem;
+                    font-size: .12rem;
+                }
+            }
+            .mll-main-contend{
+                height: 100%;
+                background: url("../images/shopbg.png") no-repeat center 1.2rem;
+                background-size: 1rem;
+                padding-top: 2.3rem;
+                text-align: center;
+                div
+                {
+                    height: .18rem;
+                    color: #999;
+                }
+                a{
+                    display: inline-block;
+                    width: 1.05rem;
+                    height: .3rem;
+                    line-height: .3rem;
+                    background-color: #da0000;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: .1rem;
+                }
+            }
         }
         .mll-footer{
             height:1.21rem;
