@@ -1,44 +1,39 @@
 #root{
-    .adminmain{
+    .registermain{
         height: 100%;
         width: 100%;
-        .ad-header{
+        .re-height{
             height: .44rem;
             line-height: .44rem;
+            background-color: #fff;
+            position: relative;
+            @include border();
             i{
                 margin-left: .1rem;
                 font-size: .20rem;
                 font-weight: 900;
             }
-        }
-        .ad-main{
-            height: 100%;
-            .ad-userlogin{
-                height: 1rem;
-                width: 100%;
-                background: url("../images/mll_logo.png") no-repeat center center;
-                background-size: 2rem;
-            }
-            .ad-usernav{
-                margin-top: .4rem;
-                height: .45rem;
-                width: 100%;
+            .re-heighttext{
+                height: .44rem;
+                width: 1.2rem;
+                line-height: .44rem;
+                position: absolute;
+                left: 50%;
+                top: 0;
                 text-align: center;
-                span{
-                    height: .45rem;
-                    line-height: .45rem;
-                    text-align: center;
-                    width: 1.17rem;
-                    font-size: .18rem;
-                    font-weight: 900;
-                }
+                font-size: .18rem;
+                font-weight: 900;
+                margin-left: -.6rem;
             }
-            .ad-userlog{
-                height: 2.05rem;
-                .ad-usertype{
-                    height: 1rem;
+        }
+        .re-main{
+            height: 100%;
+            .re-gogo{
+                margin-top: .2rem;
+                height: 2.55rem;
+                .re-content{
+                    height: 1.5rem;
                     background-color: #fff;
-                    @include border(1px 0 1px 0);
                     ul {
                         li{
                             height: .5rem;
@@ -78,12 +73,14 @@
                         li:nth-child(1){
                             @include border(0 0 1px 0);
                         }
+                        li:nth-child(2){
+                            @include border(0 0 1px 0);
+                        }
                     }
                 }
-                .ad-attr{
+                .re-btn{
                     height: 1.05rem;
                     padding: .15rem;
-                    text-align: right;
                     a{
                         display: block;
                         height: .4rem;
@@ -94,14 +91,8 @@
                         @include border(1px,#ccc,solid,4px);
                         font-size: .16rem;              
                     }
-                    span{
-                        height: .35rem;
-                        line-height: .35rem;
-                        text-align: right;
-                        color: #999;
-                    }
                 }
-            } 
+            }
         }
     }
 }

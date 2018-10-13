@@ -1,9 +1,15 @@
 import adminTpl from "../views/admin.html"
+import Backs from '../utils/back';
 
 const render = ()=>{
     $("#root").html(adminTpl)
-    $(".ad-header i").on("tap",()=>{
-        location.hash="#position";
+    new Backs(".ad-header i").init()
+    adclick()
+}
+
+const adclick = ()=>{
+    $(".ad-attr span").on("tap",()=>{
+        location.hash="#register";
     })
 }
 
