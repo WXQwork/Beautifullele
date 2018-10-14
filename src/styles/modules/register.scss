@@ -65,9 +65,16 @@
                             }
                             i{
                                 position: absolute;
-                                left: -.3rem;
-                                top: .1rem;
                                 font-size: .20rem;
+                                top: .1rem;
+                                font-size: 900;
+                            }
+                            i.il{
+                                left: -.3rem;
+                            }
+                            i.ir{
+                                left: 2.5rem;
+                                display: none;
                             }
                         }
                         li:nth-child(1){

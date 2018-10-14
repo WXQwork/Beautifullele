@@ -18,15 +18,17 @@ Router.prototype.refresh = function () {
   let hash = location.hash || '#position'
   if(localStorage.getItem("page")){
     let loop = JSON.parse(localStorage.getItem("page"))
-    if(this.steep[this.steep.length-2]==loop[loop.length-1]){
+    if(loop.length!=this.steep.length){
       this.steep=loop
     }else{
       this.steep.push(hash)
+      localStorage.setItem("page",JSON.stringify(this.steep))
     }
-    localStorage.setItem("page",JSON.stringify(this.steep))
   }else{
     this.steep.push("#position")
-    localStorage.setItem("page","#position")
+    let arr=[];
+    arr.push("#position");
+    localStorage.setItem("page",JSON.stringify(arr))
   }
   this.currentHash = hash
   this.routes[this.currentHash]()
