@@ -1,6 +1,8 @@
 function Router() {
   this.routes = {}
   this.currentHash = ''
+  //保存路由状态的数组
+  this.steep = []
 }
 
 var noop = function () {}
@@ -14,6 +16,20 @@ Router.prototype.route = function (hash, cb) {
 // 路由刷新
 Router.prototype.refresh = function () {
   let hash = location.hash || '#position'
+  if(localStorage.getItem("page")){
+    let loop = JSON.parse(localStorage.getItem("page"))
+    if(loop.length!=this.steep.length){
+      this.steep=loop
+    }else{
+      this.steep.push(hash)
+      localStorage.setItem("page",JSON.stringify(this.steep))
+    }
+  }else{
+    this.steep.push("#position")
+    let arr=[];
+    arr.push("#position");
+    localStorage.setItem("page",JSON.stringify(arr))
+  }
   this.currentHash = hash
   this.routes[this.currentHash]()
   this.switchTabbar()
