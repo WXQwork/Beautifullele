@@ -110,7 +110,8 @@
       }
     }
     main {
-      @include flex()
+      @include flex();
+      height: 100%;
     }
     .navfooter {
       height: .57rem;

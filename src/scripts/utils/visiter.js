@@ -136,11 +136,13 @@ $.extend(Visiter.prototype,{
                 },
                 success:function(data){
                     if(data.status==0){
+                        console.log(1)
                         layer.open({
                             content: _this.phonesame,
                             skin: 'msg',
                             time: 2 
                         });
+                        
                         _this.el.next().css({
                             "display":"block",
                             "color":"red"
