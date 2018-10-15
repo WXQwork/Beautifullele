@@ -95,11 +95,15 @@ gulp.task("server",()=>{
                 }),
                 proxy("/mob_api",{
                     target:"https://m.meilele.com/",
-                    changeOrigin:true,
+                    changeOrigin:true
                 }),
                 proxy("/dubbo_api",{
                     target:"https://m.meilele.com/",
-                    changeOrigin:true,
+                    changeOrigin:true
+                }),
+                proxy("/category-9999",{
+                    target:"https://m.meilele.com/",
+                    changeOrigin:true
                 })
             ]
         }))

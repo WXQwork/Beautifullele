@@ -27,12 +27,12 @@ $.extend(Visiter.prototype,{
             this.el.next().css({
                 "display":"block",
                 "color":"red"
-            }).html("&#xe641;").attr("go","N")
+            }).html("&#xe68c;").attr("go","N")
         }else{
             this.el.next().css({
                 "display":"block",
                 "color":"green"
-            }).html("&#xe664;").attr("go","Y")
+            }).html("&#xe621;").attr("go","Y")
         }
     },
     regs:function(){
@@ -46,12 +46,12 @@ $.extend(Visiter.prototype,{
                 this.el.next().css({
                     "display":"block",
                     "color":"red"
-                }).html("&#xe641;").attr("go","N")
+                }).html("&#xe68c;").attr("go","N")
             }else{
                 this.el.next().css({
                     "display":"block",
                     "color":"green"
-                }).html("&#xe664;").attr("go","Y")
+                }).html("&#xe621;").attr("go","Y")
                 this.psame();
             }
         }
@@ -62,7 +62,7 @@ $.extend(Visiter.prototype,{
                 this.el.next().css({
                     "display":"block",
                     "color":"green"
-                }).html("&#xe664;").attr("go","Y")
+                }).html("&#xe621;").attr("go","Y")
             }else{
                 layer.open({
                     content: this.samet,
@@ -72,7 +72,7 @@ $.extend(Visiter.prototype,{
                 this.el.next().css({
                     "display":"block",
                     "color":"red"
-                }).html("&#xe641;").attr("go","N")
+                }).html("&#xe68c;").attr("go","N")
             }
             var inp=$("input[class='ti']");
             var bStop=true;
@@ -146,12 +146,12 @@ $.extend(Visiter.prototype,{
                         _this.el.next().css({
                             "display":"block",
                             "color":"red"
-                        }).html("&#xe641;").attr("go","N")
+                        }).html("&#xe68c;").attr("go","N")
                     }else{
                         _this.el.next().css({
                             "display":"block",
                             "color":"green"
-                        }).html("&#xe664;").attr("go","Y")
+                        }).html("&#xe621;").attr("go","Y")
                     }
                 }
             })
