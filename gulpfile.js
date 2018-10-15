@@ -77,9 +77,6 @@ gulp.task("server",()=>{
             port: 8888,
             liverelode: true,
             middleware: [
-                // proxy('/api', {
-                //     target: 'http://localhost:3000',
-                //     changeOrigin: true
                 proxy('/api', {
                     target: 'http://localhost:3000',
                     changeOrigin: true
@@ -96,26 +93,13 @@ gulp.task("server",()=>{
                     target: 'http://localhost:8888',
                     changeOrigin: true
                 }),
-                // proxy("/api",{
-                //     target:"https://m.lagou.com/",
-                //     changeOrigin:true,
-                //     pathRewrite:{
-                //         '^/api':''
-                //     }
-                // })
                 proxy("/mob_api",{
                     target:"https://m.meilele.com/",
                     changeOrigin:true,
-                    // pathRewrite:{
-                    //     '^/mob_api':''
-                    // }
                 }),
                 proxy("/dubbo_api",{
                     target:"https://m.meilele.com/",
                     changeOrigin:true,
-                    // pathRewrite:{
-                    //     '^/mob_api':''
-                    // }
                 })
             ]
         }))
