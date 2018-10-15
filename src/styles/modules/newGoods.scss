@@ -1,325 +1,326 @@
 @font-face {
-  font-family: 'iconfont';
-  src: url('./iconfonts/iconfont.eot');
-  src: url('./iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
-  url('./iconfonts/iconfont.woff') format('woff'),
-  url('./iconfonts/iconfont.ttf') format('truetype'),
-  url('./iconfonts/.svg#iconfont') format('svg');
+  font-family: 'yo-ico';
+  src: url('/iconfonts/iconfont.eot');
+  src: url('/iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('/iconfonts/iconfont.woff') format('woff'),
+  url('/iconfonts/iconfont.ttf') format('truetype'),
+  url('/iconfonts/.svg#iconfont') format('svg');
 }
-#root{
-    // box-sizing: border-box;
-    // position: absolute;
-}
-.listHead{
-  width:100%;
-  height:.44rem;
-  background: #fff;
-
-  &>div{
+.newgoods{
+    width:100%;
+    .listHead{
       width:100%;
-      height: .44rem;
-      box-sizing: border-box;
-      @include flexbox();
-      @include justify-content();
-      padding-top:.08rem;
-      text-align: center;
-
-      &>:nth-child(1){
-          width:10%;
-          height: .28rem;
-          line-height: .28rem;
+      height:.44rem;
+      background: #fff;
+    
+      &>div{
+          width:100%;
+          height: .44rem;
+          box-sizing: border-box;
           @include flexbox();
-          i{
-              width:.11rem;
-              height: .2rem;
-          }
-      }
-      &>:nth-child(2){
-          width:75%;
-          height: 100%;
-          @include flexbox();
-          
-          &>i{
+          @include justify-content();
+          padding-top:.08rem;
+          text-align: center;
+    
+          &>:nth-child(1){
               width:10%;
               height: .28rem;
-              @include border(1px, #f0f0f0,solid,5px);
-              border:0;
-              border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-              background:#f0f0f0;
-              text-align: center;
               line-height: .28rem;
+              font-size:.2rem;
+              color:#333;
+              font-weight: 600;
+              @include flexbox();
           }
-          &>input{
-              width:90%;
-              height: .28rem;
-              outline: none;
-              @include border(1px, #f0f0f0,solid,5px);
-              border:0;
-              border-top-left-radius: 0;
-              border-bottom-left-radius: 0;
-              background:#f0f0f0;
+          &>:nth-child(2){
+              width:75%;
+              height: 100%;
+              @include flexbox();
+              
+              &>i{
+                  width:10%;
+                  height: .28rem;
+                  @include border(1px, #f0f0f0,solid,5px);
+                  border:0;
+                  border-top-right-radius: 0;
+                  border-bottom-right-radius: 0;
+                  background:#f0f0f0;
+                  text-align: center;
+                  line-height: .28rem;
+              }
+              &>input{
+                  width:90%;
+                  height: .28rem;
+                  outline: none;
+                  @include border(1px, #f0f0f0,solid,5px);
+                  border:0;
+                  border-top-left-radius: 0;
+                  border-bottom-left-radius: 0;
+                  background:#f0f0f0;
+              }
+          }
+          &>:nth-child(3){
+             width:10%;
+             height: .28rem;
+             line-height: .28rem;
+             font-size:.26rem;
+             color:#333;
+             font-weight: 900;
           }
       }
-      &>:nth-child(3){
-         width:10%;
-         height: .28rem;
-         line-height: .28rem;
-      }
-  }
-}
-
-.nav1{
-    width:100%;
-    height:.4rem;
-    background: #fff;
-    &>ul{
-        width:100%;
-        height: 100%;
-        @include flexbox();
-        @include justify-content(space-around);
-        color:#666;
-        
-        &>li{
-            width:29%;
-            height: 100%;
-            line-height: .4rem;
-            text-align: center;
-        }
-        &>li:nth-child(2){
-            @include flexbox();
-            @include flex-direction(row);
-            &>span:nth-child(1){
-                width:60%;
-                height: .4rem;
-                text-align: right;
-            }
-            &>span:nth-child(2){
-                height: .4rem;
-                @include flex();
-                @include flexbox();
-                @include flex-direction(column);
-                text-align: left;
-
-                &>i{
-                    width: .05rem;
-                    height:.04rem;
-                }
-            }
-        }
-        &>li:nth-child(4){
-            width: 13%;
-            height: 100%;
-            line-height: .4rem;
-            text-align: center;
-        }
     }
-}
-
-.fixed-top{
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: 999;
-}
-.ceiling{
-    width:100%;
-    height: .44rem;
-    background:#fff;
-    @include flexbox();
-    @include border(1px, #d8d8d8,solid,null);
-    border-left:none;
-    border-right:none;
-
-
-    &>ul{
+    
+    .nav1{
         width:100%;
-        height: 100%;
-        padding-top:.08rem;
-        @include flexbox();
-        @include justify-content(space-around);
-        &>li{
-           width:21%;
-           height: .28rem;
-           line-height: .28rem;
-           color:#666;
-           background:#f0f0f0;
-           text-align: center;
-           @include border(1px, #f0f0f0,solid,3px);
-        }
-        &>li:nth-child(3),li:nth-child(4){
-            @include flexbox();
-           
-            &>span{
-                width:85%;
-                height: 100%;
-            }
-            &>i{
-                 width:15%;
-                 height: 100%;
-            }
-        }
-    }
-}
-
-.mainStyle1{
-    width:100%;
-    height: auto;
-    background:#fff;
-
-    &>ul{
-        width:100%;
-        height: 100%;
-
-         &>li{
+        height:.4rem;
+        background: #fff;
+        &>ul{
             width:100%;
-            height: 1.25rem;
-            padding:.075rem 0;
-
-            &>div{
-                width:100%;
+            height: 100%;
+            @include flexbox();
+            @include justify-content(space-around);
+            color:#666;
+            
+            &>li{
+                width:29%;
                 height: 100%;
+                line-height: .4rem;
+                text-align: center;
+            }
+            &>li:nth-child(2){
                 @include flexbox();
-                @include justify-content();
-
-                &>a{
-                    width: 1.81rem;
-                    height: 1.1rem;
-                    padding-right:.17rem;
-
-                    &>img{
-                        width: 1.64rem;
-                        height: 1.1rem;
+                @include flex-direction(row);
+                &>span:nth-child(1){
+                    width:60%;
+                    height: .4rem;
+                    text-align: right;
+                }
+                &>span:nth-child(2){
+                    height: .4rem;
+                    @include flex();
+                    @include flexbox();
+                    @include flex-direction(column);
+                    text-align: left;
+    
+                    &>i{
+                        width: .05rem;
+                        height:.04rem;
                     }
                 }
-                &>.msg{
-                    @include flex();
-                    padding-right:.12rem;
-
-                    &>.msg-detail{
-                        width:100%;
-                        height: .36rem;
-                        line-height: .18rem;
-                        overflow: hidden;
-                        &>a{
-                            color:#555;
-                            font-size: .14rem;
+            }
+            &>li:nth-child(4){
+                width: 13%;
+                height: 100%;
+                line-height: .4rem;
+                text-align: center;
+            }
+        }
+    }
+    
+    #fixed-top{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 999;
+    }
+    
+    .ceiling{
+        width:100%;
+        height: .44rem;
+        background:#fff;
+        @include flexbox();
+        @include border(1px, #d8d8d8,solid,null);
+        border-left:none;
+        border-right:none;
+    
+        &>ul{
+            width:100%;
+            height: 100%;
+            padding-top:.08rem;
+            @include flexbox();
+            @include justify-content(space-around);
+            &>li{
+               width:21%;
+               height: .28rem;
+               line-height: .28rem;
+               color:#666;
+               background:#f0f0f0;
+               text-align: center;
+               @include border(1px, #f0f0f0,solid,3px);
+            }
+            &>li:nth-child(3),li:nth-child(4){
+                @include flexbox();
+               
+                &>span{
+                    width:85%;
+                    height: 100%;
+                }
+                &>i{
+                     width:15%;
+                     height: 100%;
+                }
+            }
+        }
+    }
+    
+    .mainStyle1{
+        width:100%;
+        height: auto;
+        background:#fff;
+    
+        &>ul{
+            width:100%;
+            height: 100%;
+    
+             &>li{
+                width:100%;
+                height: 1.25rem;
+                padding:.075rem 0;
+    
+                &>div{
+                    width:100%;
+                    height: 100%;
+                    @include flexbox();
+                    @include justify-content();
+    
+                    &>a{
+                        width: 1.81rem;
+                        height: 1.1rem;
+                        padding-right:.17rem;
+    
+                        &>img{
+                            width: 1.64rem;
+                            height: 1.1rem;
                         }
                     }
-                    &>.msg-price{
-                        width:100%;
-                        height: .4rem;
-                        padding-top:.22rem;
-                        color:#dd2727;
-                        font-size: .18rem;
-                    }
-                    &>.msg-sales{
-                        width:100%;
-                        height: .24rem;
-                        color:#aaa;
-                        padding-top:.085rem;
+                    &>.msg{
+                        @include flex();
+                        padding-right:.12rem;
+    
+                        &>.msg-detail{
+                            width:100%;
+                            height: .36rem;
+                            line-height: .18rem;
+                            overflow: hidden;
+                            &>a{
+                                color:#555;
+                                font-size: .14rem;
+                            }
+                        }
+                        &>.msg-price{
+                            width:100%;
+                            height: .4rem;
+                            padding-top:.22rem;
+                            color:#dd2727;
+                            font-size: .18rem;
+                        }
+                        &>.msg-sales{
+                            width:100%;
+                            height: .24rem;
+                            color:#aaa;
+                            padding-top:.085rem;
+                        }
                     }
                 }
-            }
-        } 
+            } 
+        }
     }
-}
-
-.mainStyle2{
-    width:100%;
-    height: auto;
-
-    &>ul{
+    
+    .mainStyle2{
         width:100%;
-        height: 100%;
-        @include flexbox();
-        @include justify-content();
-        @include flex-flow(wrap);
-        &>li{
-            width:1.85rem;
-            height: 1.97rem;
-            margin-top:.1rem;
-            &>div{
-                width:100%;
-                height:100%;
-                @include flexbox();
-                @include flex-direction(column);
-                @include justify-content();
-                &>a{
-                    width:1.85rem;
-                    height: 1.22rem;
-                    &>img{
+        height: auto;
+    
+        &>ul{
+            width:100%;
+            height: 100%;
+            @include flexbox();
+            @include justify-content();
+            @include flex-flow(wrap);
+            &>li{
+                width:1.85rem;
+                height: 1.97rem;
+                margin-top:.1rem;
+                &>div{
+                    width:100%;
+                    height:100%;
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content();
+                    &>a{
                         width:1.85rem;
                         height: 1.22rem;
-                    }
-                }
-                &>.msg{
-                    width:100%;
-                    height: .75rem;
-                    background: #fff;
-                    padding:.11rem .095rem 0;
-
-                    &>.msg-detail{
-                        width:100%;
-                        height: .14rem;
-                        line-height: .14rem;
-                        overflow: hidden;
-                        &>a{
-                            color:#555;
-                            font-size: .14rem;
+                        &>img{
+                            width:1.85rem;
+                            height: 1.22rem;
                         }
                     }
-                    &>.msg-price{
-                        float: left;
-                        width:30%;
-                        height: .18rem;
-                        line-height: .18rem;
-                        color:#dd2727;
-                        font-size: .14rem;
-                        margin-right:.1rem;
-                    }
-                    &>.msg-sales{
-                        float: left;
-                        width:40%;
-                        height: .18rem;
-                        font-size: .12rem;
-                        color:#aaa;
+                    &>.msg{
+                        width:100%;
+                        height: .75rem;
+                        background: #fff;
+                        padding:.11rem .095rem 0;
+    
+                        &>.msg-detail{
+                            width:100%;
+                            height: .14rem;
+                            line-height: .14rem;
+                            overflow: hidden;
+                            &>a{
+                                color:#555;
+                                font-size: .14rem;
+                            }
+                        }
+                        &>.msg-price{
+                            float: left;
+                            width:30%;
+                            height: .18rem;
+                            line-height: .18rem;
+                            color:#dd2727;
+                            font-size: .14rem;
+                            margin-right:.1rem;
+                        }
+                        &>.msg-sales{
+                            float: left;
+                            width:40%;
+                            height: .18rem;
+                            font-size: .12rem;
+                            color:#aaa;
+                        }
                     }
                 }
             }
-        }
-        &>li:nth-child(2n){
-            margin-left:.05rem;
+            &>li:nth-child(2n){
+                margin-left:.05rem;
+            }
         }
     }
-}
-
-footer{
-    width:100%;
-    height: 1.22rem;
-    background:#414141;
-    padding:.3rem 20% 0;
-
-    &>.down-btn{
+    
+    footer{
         width:100%;
-        height: .5rem;
-        padding-bottom: .16rem;
-        @include flexbox();
-        @include justify-content(space-between);
-
-        &>span{
-            width:.87rem;
-            height: .34rem;
-            @include border(1px,#6d6d6d,solid,3px);
-            color:#fff;
-            text-align: center;
-            line-height: .34rem;
+        height: 1.22rem;
+        background:#414141;
+        padding:.3rem 20% 0;
+    
+        &>.down-btn{
+            width:100%;
+            height: .5rem;
+            padding-bottom: .16rem;
+            @include flexbox();
+            @include justify-content(space-between);
+    
+            &>span{
+                width:.87rem;
+                height: .34rem;
+                @include border(1px,#6d6d6d,solid,3px);
+                color:#fff;
+                text-align: center;
+                line-height: .34rem;
+            }
         }
-    }
-    &>.footMsg{
-        text-align: center;
-        color:#aaa;
-        font-size:.12rem;
-        padding-bottom: .04rem;
+        &>.footMsg{
+            text-align: center;
+            color:#aaa;
+            font-size:.12rem;
+            padding-bottom: .04rem;
+        }
     }
 }

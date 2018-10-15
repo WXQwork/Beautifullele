@@ -92,14 +92,19 @@ gulp.task("server",()=>{
                 proxy('/logn', {
                     target: 'http://localhost:8888',
                     changeOrigin: true
+                }),
+                proxy("/mob_api",{
+                    target:"https://m.meilele.com/",
+                    changeOrigin:true
+                }),
+                proxy("/dubbo_api",{
+                    target:"https://m.meilele.com/",
+                    changeOrigin:true
+                }),
+                proxy("/category-9999",{
+                    target:"https://m.meilele.com/",
+                    changeOrigin:true
                 })
-                // proxy("/api",{
-                //     target:"https://m.lagou.com/",
-                //     changeOrigin:true,
-                //     pathRewrite:{
-                //         '^/api':''
-                //     }
-                // })
             ]
         }))
 })
