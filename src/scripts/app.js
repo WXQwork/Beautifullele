@@ -4,6 +4,7 @@ import searchController from './controllers/search'
 import profileController from './controllers/profile'
 import adminController from './controllers/admin'
 import newGoodsController from './controllers/new-goods'
+import detailController from './controllers/details'
 
 const router = new Router()
 router.init()
@@ -12,3 +13,4 @@ router.route('#search', searchController.render)
 router.route('#profile', profileController.render)
 router.route('#admin', adminController.render)
 router.route('#top2', newGoodsController.render)
+router.route("#top3",detailController.render)

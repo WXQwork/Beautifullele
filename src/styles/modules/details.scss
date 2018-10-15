@@ -1,0 +1,321 @@
+.detHead{
+    width:100%;
+    height:.44rem;
+    background:#fff;
+    @include flexbox();
+    @include justify-content(space-around);
+    text-align: center;
+    line-height: .44rem;
+    &>span:nth-child(2){
+        width:70%;
+        height: .44rem;
+        font-size:.18rem;
+        font-weight:800; 
+    }
+}
+
+.goodDetail{
+    width:100%;
+    height: auto;
+    background:#fff;
+
+    &>div:nth-child(1){
+        width:100%;
+        height: 2.48rem;
+        &>img{
+            width:100%;
+            height: 2.48rem;
+        }
+    }
+    &>div:nth-child(2){
+        width:100%;
+        height: .5rem;
+        background: #ed533b;
+        @include flexbox();
+        @include justify-content();
+        padding-top:.07rem;
+
+        &>div:nth-child(1){
+            height: 100%;
+            width:65%;
+            @include flexbox();
+            @include flex-direction(column);
+            color:#fff;
+
+            &>p:nth-child(1){
+                font-size: .14rem;
+                font-weight: 800;
+            }
+            &>p:nth-child(2){
+                font-size: .12rem;
+            }
+        }
+        &>div:nth-child(2){
+            width:.94rem;
+            height:.3rem;
+            background: #fff;
+            color:#ee4321;
+            @include border(1px,#ee4321,solid,3px);
+            text-align: center;
+            line-height: .3rem;
+        }
+    }
+    &>div:nth-child(3){
+        width:100%;
+        height: .98rem;
+        padding: .1rem 0 .15rem;
+
+        &>div{
+            width:100%;
+            height: .51rem;
+            @include flexbox();
+            @include justify-content(space-around);
+            padding:.1rem 0 .15rem;
+
+            &>span:nth-child(1){
+                width:.5rem;
+                height: .25rem;
+                font-size: .25rem;
+                color:#cf000e;
+                text-align: left;
+            }
+            &>span:nth-child(2){
+                width:.69rem;
+                height: .26rem;
+                @include border(1px, #d6d6d6,solid,3px);
+                text-align: center;
+                line-height: .26rem;
+            }
+            &>span:nth-child(3){
+                color:#aaa;
+                line-height: .3rem;
+            }
+        }
+        &>p{
+            width:100%;
+            height: .2rem;
+            font-size: .16rem;
+            overflow: hidden;
+            padding:0 3%;
+        }
+    }
+}
+
+.options{
+    width:100%;
+    height: 1.5rem;
+    background:#fff;
+    margin:.1rem 0;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-around);
+
+    &>li{
+        width:100%;
+        height: .5rem;
+        padding-left:1%;
+        line-height: .5rem;
+    }
+    &>li:nth-child(2),li:nth-child(3){
+        border-top:1px solid #d6d6d6;
+    }
+}
+
+.brank{
+    width:100%;
+    height: 1.66rem;
+    background:#fff4e0;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content();
+
+    &>div:nth-child(1){
+        width:100%;
+        height: 1.35rem;
+        padding:.15rem .1rem;
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(space-around);
+
+        &>div:nth-child(1){
+            width:1.4rem;
+            height: 1.05rem;
+            &>img{
+                width:1.4rem;
+                height: 1.05rem;
+            }
+        }
+        &>div:nth-child(2){
+            width:1.48rem;
+            height: 1.04rem;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(space-around);
+            &>p:nth-child(1){
+                width:100%;
+                height: .14rem;
+                font-size: .14rem;
+                color:#333;
+            }
+            &>p:nth-child(2){
+                width:100%;
+                height: .4rem;
+                padding:.1rem 0 .45rem;
+                @include flexbox();
+                @include justify-content(space-around);
+                color:#777;
+                &>span:nth-child(1){
+                    width:.4rem;
+                    height: .4rem;
+                    &>img{
+                        width:.4rem;
+                        height: .4rem;
+                        @include border(1px,#fff4e0,solid,50%);
+                    }
+                }
+                &>span:nth-child(2){
+                    width:.72rem;
+                    height: .4rem;
+                    line-height: .2rem;
+                    font-size: .12rem;
+                }
+            }
+            &>p:nth-child(3){
+                width:100%;
+                height: .3rem;
+                line-height: .3rem;
+                text-align: center;
+                background:#da0000;
+                color:#fff;
+                @include border(1px,#da0000,solid,3px);
+            }
+        }
+    }
+    &>div:nth-child(2){
+        width:100%;
+        height: .31rem;
+        background:#fff;
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(space-around);
+        &>span{
+            color:#777;
+            text-align: center;
+            line-height: .31rem;
+            font-size:.14rem;
+        }
+    }
+
+}
+
+.detailTab{
+    background: #fff;
+    &>div:nth-child(1){
+        width:100%;
+        height: .4rem;
+        background: #fff;
+        @include flexbox();
+        @include justify-content(space-around);
+        border-bottom: 1px solid #d6d6d6;
+        text-align: center;
+        margin-top:.1rem;
+        &>span{
+            padding:.1rem .3rem;
+        }
+        &>span:nth-child(1){
+            color:#da0000;
+            border-bottom: .02rem solid #da0000;
+        }
+    }
+    &>div:nth-child(2){
+        width:100%;
+        height: auto;
+        
+        &>div{
+            width:3.55rem;
+            height: 2.35rem;
+            margin:.1rem .1rem;
+            &>img{
+                width:3.55rem;
+                height: 2.35rem;
+            }
+        }
+    }
+}
+
+footer{
+    width:100%;
+    height: 1.22rem;
+    background:#414141;
+    padding:.3rem 20% 0;
+
+    &>.down-btn{
+        width:100%;
+        height: .5rem;
+        padding-bottom: .16rem;
+        @include flexbox();
+        @include justify-content(space-between);
+
+        &>span{
+            width:.87rem;
+            height: .34rem;
+            @include border(1px,#6d6d6d,solid,3px);
+            color:#fff;
+            text-align: center;
+            line-height: .34rem;
+        }
+    }
+    &>.footMsg{
+        text-align: center;
+        color:#aaa;
+        font-size:.12rem;
+        padding-bottom: .04rem;
+    }
+}
+
+.bottom{
+    width:100%;
+    height: .45rem;
+    background:#fff;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    
+    &>ul{
+        width:100%;
+        height: 100%;
+        @include flexbox();
+        @include justify-content(space-around);
+        @include border(1px,#d6d6d6,solid);
+        border-left:0;
+        border-right:0;
+        &>li{
+            text-align: center;
+            color:#666;
+        }
+        &>li:nth-child(1),li:nth-child(2){
+            width:20%;
+            height: 100%;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content();
+            line-height: .22rem;
+            border-right:1px solid #d6d6d6;
+
+        }
+        &>li:nth-child(3){
+            width:30%;
+            height: 100%;
+            line-height: .45rem;
+            border-right:1px solid #d6d6d6;
+        }
+        &>li:nth-child(4){
+            width:30%;
+            height: 100%;
+            line-height: .45rem;
+            border-right:0;
+            background:#da0000;
+            color:#fff;
+        }
+    }
+}
