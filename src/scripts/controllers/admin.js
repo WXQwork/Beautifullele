@@ -1,11 +1,25 @@
+import ContentTel from '../views/ContentTel.html'
 import adminTpl from "../views/admin.html"
+import adminLogoTpl from '../views/adminLogo.html'
 import Backs from '../utils/back';
 
 const render = ()=>{
-    $("#root").html(adminTpl)
-    new Backs(".ad-header i").init()
-    adclick()
-    adblur()
+    if(sessionStorage.getItem("ID")){
+        $('#root').html(ContentTel)
+        $(".laye-middle").html("我的美乐乐")
+        $(".mll-main").html(adminLogoTpl)
+        $(".mll-user-name").html("mll_"+sessionStorage.getItem("ID"))
+        new Backs(".laye-back i").init()
+        $(".admincut").on("tap",()=>{
+            sessionStorage.clear()
+            location.hash=""
+        })
+    }else{
+        $("#root").html(adminTpl)
+        new Backs(".ad-header i").init()
+        adclick()
+        adblur()
+    }
 }
 
 const adclick = ()=>{
