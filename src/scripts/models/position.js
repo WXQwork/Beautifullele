@@ -11,7 +11,10 @@ const list=()=>{
     return $.ajax({
         url:"/mob_api/app_tg_goods",
         success:(result)=>{
+<<<<<<< HEAD
             console.log(result.result["2018Msy_tg"].goods_info)
+=======
+>>>>>>> development
             return result
         }
     })

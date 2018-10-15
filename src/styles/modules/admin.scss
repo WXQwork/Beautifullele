@@ -1,0 +1,94 @@
+#root{
+    .adminmain{
+        height: 100%;
+        width: 100%;
+        .ad-header{
+            height: .44rem;
+            line-height: .44rem;
+            i{
+                margin-left: .1rem;
+                font-size: .20rem;
+                font-weight: 900;
+            }
+        }
+        .ad-main{
+            height: 100%;
+            .ad-userlogin{
+                height: 1rem;
+                width: 100%;
+                background: url("../images/mll_logo.png") no-repeat center center;
+                background-size: 2rem;
+            }
+            .ad-userlog{
+                margin-top: .6rem;
+                height: 2.05rem;
+                .ad-usertype{
+                    height: 1rem;
+                    background-color: #fff;
+                    @include border(1px 0 1px 0);
+                    ul {
+                        li{
+                            height: .5rem;
+                            width: 100%;
+                            margin-left: .5rem;
+                            position: relative;
+                            input{
+                                width: 3.2rem;
+                                height: .5rem;
+                                font-size: .16rem;
+                                border: none;
+                                padding: .1rem 0;
+                            }
+                            input::-webkit-input-placeholder{
+                                font-size: .16rem;
+                                color:#ccc;
+                            }
+                            input::-moz-placeholder{
+                                font-size: .16rem;   
+                                color:#ccc;
+                            }
+                            input:-moz-placeholder{
+                                font-size: .16rem;    
+                                color:#ccc;
+                            }
+                            input:-ms-input-placeholder{
+                                font-size: .16rem;  
+                                color:#ccc;
+                            }
+                            i{
+                                position: absolute;
+                                left: -.3rem;
+                                top: .1rem;
+                                font-size: .20rem;
+                            }
+                        }
+                        li:nth-child(1){
+                            @include border(0 0 1px 0);
+                        }
+                    }
+                }
+                .ad-attr{
+                    height: 1.05rem;
+                    padding: .15rem;
+                    text-align: right;
+                    a{
+                        display: block;
+                        height: .4rem;
+                        text-align: center;
+                        line-height: .4rem;
+                        color: #fff;
+                        background-color: #ccc;
+                        @include border(1px,#ccc,solid,4px);
+                        font-size: .16rem;              
+                    }
+                    span{
+                        height: .35rem;
+                        line-height: .35rem;
+                        text-align: right;
+                        color: #999;
+                    }
+                }
+            } 
+        }
+    }
+}

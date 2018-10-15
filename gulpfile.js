@@ -80,6 +80,28 @@ gulp.task("server",()=>{
                 // proxy('/api', {
                 //     target: 'http://localhost:3000',
                 //     changeOrigin: true
+                proxy('/api', {
+                    target: 'http://localhost:3000',
+                    changeOrigin: true
+                }),
+                proxy('/regis', {
+                    target: 'http://localhost:8888',
+                    changeOrigin: true
+                }),
+                proxy('/phone', {
+                    target: 'http://localhost:8888',
+                    changeOrigin: true
+                }),
+                proxy('/logn', {
+                    target: 'http://localhost:8888',
+                    changeOrigin: true
+                }),
+                // proxy("/api",{
+                //     target:"https://m.lagou.com/",
+                //     changeOrigin:true,
+                //     pathRewrite:{
+                //         '^/api':''
+                //     }
                 // })
                 proxy("/mob_api",{
                     target:"https://m.meilele.com/",
