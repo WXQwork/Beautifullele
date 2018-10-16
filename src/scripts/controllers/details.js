@@ -1,9 +1,11 @@
 import detailTpl from '../views/details.html'
 import detailModel from '../models/details'
 import detailGoodTpl from '../views/details-goods.html'
+import Backs from '../utils/back';
 
 const render = async ()=>{
     $("#root").html(detailTpl);
+    new Backs(".goback1").init()
     scroll();
     var goodId = location.href.split("?")[1].split("#")[0].split("=")[1]
     console.log(goodId)

@@ -16,6 +16,49 @@ const render = async ()=>{
         location.href = "?id="+shopId+"#details"
     })
     scroll()
+
+    //切换风格
+    $('.cutStyle').on("tap",function(){
+        if($('main').attr("class")=='mainStyle1'){
+            $(this).html("&#xe658;")
+            $('main').attr("class","mainStyle2")
+        }else if($('main').attr("class")=='mainStyle2'){
+            $(this).html("&#xe62e;")
+            $('main').attr("class","mainStyle1")
+        }
+    })
+
+    //价格升降排序
+    $(".priceUp").on("tap",function(){
+        $(".priceUp").attr("data-click","true")
+        $(".priceDown").attr("data-click","false")
+        let list = datasource.sort(compareUp("show_price"));
+        renderNewgoods(list);
+    })
+    $(".priceDown").on("tap",function(){
+        $(".priceUp").attr("data-click","false")
+        $(".priceDown").attr("data-click","true")
+        let list = datasource.sort(compareDown("show_price"));
+        renderNewgoods(list);
+    })
+}
+
+//升序
+const compareUp = (attr)=>{
+    return (a,b)=>{
+        var value1 = a[attr]
+        var value2 = b[attr]
+        return value1-value2
+    }
+}
+
+//降序
+const compareDown = (attr)=>{
+    return (a,b)=>{
+        var value1 = a[attr]
+        var value2 = b[attr]
+        return value2-value1
+    }
 }
 
 const renderNewgoods = async (list)=>{
@@ -38,21 +81,22 @@ const scroll = ()=>{
     newScroll.on("scrollEnd",async function(){
         let top = this.y,
             maxY = this.maxScrollY - top;
-            console.log(this,this.maxScrollY)
             if(maxY >= 0){
                 let result1 = (JSON.parse(await newGoodsModel.loadmore(++num))).goods_list;
                 let list = datasource = [
                     ...datasource,
                     ...result1
                 ]
-                console.log(list)
                 await renderNewgoods(list)
                 this.refresh()
-                this.scroll.scrollTo(0,this.maxScrollY)
+            }
+            if( $(".priceUp").attr("data-click")=="true"){
+                let list = datasource.sort(compareUp("show_price"));
+                console.log(list);
+                renderNewgoods(list);
             }
     })
 }
-
 
 export default {
     render
