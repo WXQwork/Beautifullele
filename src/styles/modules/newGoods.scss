@@ -101,9 +101,18 @@
                     @include flex-direction(column);
                     text-align: left;
     
-                    &>i{
+                    &>i:nth-child(1){
                         width: .05rem;
                         height:.04rem;
+                        font-size: .12rem;
+                        padding-left:.01rem;
+                        padding-bottom:.01rem;
+                    }
+                    &>i:nth-child(2){
+                        width: .05rem;
+                        height:.04rem;
+                        font-size: .14rem;
+                        padding-top:.01rem;
                     }
                 }
             }
