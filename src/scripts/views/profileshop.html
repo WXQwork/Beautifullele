@@ -1,3 +1,4 @@
+{{#each obj}}
 <div class="mll-list">
     <div class=""></div>
     <div class="mll-main-list">
@@ -5,17 +6,18 @@
             <input type="checkbox" name="" id="" />
         </div>
         <div class="td2">
-            <img src="./images/book3.jpg" alt="">
+            <img src="{{img}}" alt="">
         </div>
         <div class="td3">
-            <div class="td-1">优雅弧形桌脚 餐厅1.4米长餐桌套装（1桌+4椅）</div>
-            <span class="td-2">¥6220.00</span>
+            <div class="td-1">{{tit}}</div>
+            <span class="td-2">¥{{price}}.00</span>
             <div class="td-3">
                 <span>-</span>
-                <input type="text" value="1">
+                <input type="text" value="{{num}}">
                 <span>+</span>
                 <i class="yo-ico">&#xe645;</i>
             </div>
         </div>
     </div>
 </div>
+{{/each}}
