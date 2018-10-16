@@ -7,7 +7,8 @@ import Backs from '../utils/back';
 const render = () => {
   $('#root').html(ContentTel)
   if(sessionStorage.getItem("ID")){
-    $(".mll-main").html(profileLogoTpl)
+    // $(".mll-main").html(profileLogoTpl)
+    $(".mll-main").html(profileShopTpl)
   }else{
     $(".mll-main").html(profileTpl)
     $("#mlllogo").on("tap",()=>{
