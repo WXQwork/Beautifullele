@@ -1,0 +1,24 @@
+.root-class {
+    width: 100%;
+    background: #ffffff;
+    @include flexbox();
+    .search-top {
+        height: 0.4rem;
+        background: #fff;
+        @include border(1px, #dfdfdf, solid);
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items();
+        @include flex();
+        .search {
+            width: 3.44rem;
+            height: 0.3rem;
+            background: #eee;
+            @include border-radius(0.05rem);
+        }
+    }
+    .class-mid {
+        width: 100%;
+        height: 100%;
+    }
+}
