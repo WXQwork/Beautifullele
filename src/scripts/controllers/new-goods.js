@@ -11,6 +11,10 @@ const render = async ()=>{
     let list = datasource = (JSON.parse(await newGoodsModel.newGood())).goods_list
     renderNewgoods(list);
     new Backs(".goback").init()
+    $(".newList li").on("tap",function(){
+        let shopId = $(this).attr("data-url");
+        location.href = "?id="+shopId+"#details"
+    })
     scroll()
 }
 
