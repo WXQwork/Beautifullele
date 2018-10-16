@@ -1,0 +1,72 @@
+.root-class {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    @include flexbox();
+    @include flex-direction(column);
+    .search-top {
+        width: 100%;
+        height: 0.45rem;
+        background: #fff;
+        z-index: 20;
+        @include border(0 0 1px 0, #dfdfdf, solid);
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items();
+        .search {
+            width: 3.44rem;
+            height: 0.3rem;
+            background: #eee;
+            @include flexbox();
+            @include border-radius(0.05rem);
+        }
+    }
+    .class-mid {
+        width: 100%;
+        height: 100%;
+        @include flexbox();
+        .class-mid-left {
+            @include flex(1);
+            @include border(0 1px 0 0, #dfdfdf, solid);
+            ul {
+                width: 100%;
+                height: 101%;
+            }
+            ul li {
+                height: 0.5rem;
+                padding: 0.1rem 0;
+                line-height: 0.3rem;
+                text-align: center;
+                font-size: 0.14rem;
+                color: #636363;
+                i {
+                    width: 0.02rem;
+                    height: 0.3rem;
+                    float: left;
+                    background: #ffffff;
+                }
+            }
+            ul li.current {
+                font-size: 0.16rem;
+                color: #c81c28;
+                i {
+                    background: #c81c28;
+                }
+            }
+        }
+        .class-mid-right {
+            height: 100%;
+            @include flex(3);
+            .content {
+                width: 100%;
+                height: 101%;
+                padding: 0.14rem 0.14rem 0;
+                div:first-child {
+                    a img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

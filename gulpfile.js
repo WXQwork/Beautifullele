@@ -93,6 +93,14 @@ gulp.task("server",()=>{
                     target: 'http://localhost:8888',
                     changeOrigin: true
                 }),
+                proxy('/gobuy', {
+                    target: 'http://localhost:8888',
+                    changeOrigin: true
+                }),
+                proxy('/shoping', {
+                    target: 'http://localhost:8888',
+                    changeOrigin: true
+                }),
                 proxy("/mob_api",{
                     target:"https://m.meilele.com/",
                     changeOrigin:true

@@ -6,6 +6,11 @@
     @include justify-content(space-around);
     text-align: center;
     line-height: .44rem;
+    &>span{
+        font-size: .24rem;
+        color:#333;
+        font-weight: 800;
+    }
     &>span:nth-child(2){
         width:70%;
         height: .44rem;
