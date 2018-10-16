@@ -86,6 +86,11 @@
                 line-height: .4rem;
                 text-align: center;
             }
+            &>li:nth-child(1){
+                &>i{
+                    font-size: .12rem;
+                }
+            }
             &>li:nth-child(2){
                 @include flexbox();
                 @include flex-direction(row);
@@ -166,8 +171,10 @@
                     height: 100%;
                 }
                 &>i{
-                     width:15%;
+                     width:20%;
                      height: 100%;
+                     font-size: .12rem;
+                     text-align: center;
                 }
             }
         }

@@ -31,13 +31,18 @@ const render = async ()=>{
     //价格升降排序
     $(".priceUp").on("tap",function(){
         $(".priceUp").attr("data-click","true")
-        $(".priceDown").attr("data-click","false")
+        $(".priceUp").css("color","#dd2727")
+        $(".priceDown").css("color","#666")
+        $(".priceUp").parent().siblings().css("color","#dd2727")
+        $(".priceDown").removeAttr("data-click")
         let list = datasource.sort(compareUp("show_price"));
         renderNewgoods(list);
     })
     $(".priceDown").on("tap",function(){
-        $(".priceUp").attr("data-click","false")
         $(".priceDown").attr("data-click","true")
+        $(".priceUp").css("color","#666")
+        $(".priceDown").css("color","#dd2727")
+        $(".priceUp").removeAttr("data-click")
         let list = datasource.sort(compareDown("show_price"));
         renderNewgoods(list);
     })
@@ -75,7 +80,11 @@ const scroll = ()=>{
 
     newScroll.on("scroll",function(){
         let top = this.y,
-            maxY = this.maxScrollY - top;
+            maxY = this.maxScrollY - top
+        // let ceil = $(".ceiling")
+        //     $(".ceiling").remove()
+        //     console.log(ceil)
+            // $("#root").append().attr("id","fixed-top")
         
     })
     newScroll.on("scrollEnd",async function(){
@@ -90,9 +99,14 @@ const scroll = ()=>{
                 await renderNewgoods(list)
                 this.refresh()
             }
-            if( $(".priceUp").attr("data-click")=="true"){
+            if( $(".priceUp").attr("data-click")){
                 let list = datasource.sort(compareUp("show_price"));
-                console.log(list);
+                renderNewgoods(list);
+            }else if($(".priceDown").attr("data-click")){
+                let list = datasource.sort(compareDown("show_price"));
+                renderNewgoods(list);
+            }else if(!($(".priceUp").attr("data-click")&&$(".priceDown").attr("data-click"))){
+                let list = datasource.sort(function(){return 0.5-Math.random()});
                 renderNewgoods(list);
             }
     })
