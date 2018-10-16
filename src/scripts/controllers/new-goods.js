@@ -11,6 +11,10 @@ const render = async ()=>{
     let list = datasource = (JSON.parse(await newGoodsModel.newGood())).goods_list
     renderNewgoods(list);
     new Backs(".goback").init()
+    $(".newList li").on("tap",function(){
+        let shopId = $(this).attr("data-url");
+        location.href = "?id="+shopId+"#details"
+    })
     scroll()
 }
 
@@ -29,10 +33,6 @@ const scroll = ()=>{
     newScroll.on("scroll",function(){
         let top = this.y,
             maxY = this.maxScrollY - top;
-
-        // if(top <= -84){
-        //     $(".ceiling").addClass("fixed-top")
-        // }
         
     })
     newScroll.on("scrollEnd",async function(){
