@@ -1,6 +1,7 @@
 import ContentTel from '../views/ContentTel.html'
 import profileTpl from '../views/profile.html'
 import profileLogoTpl from '../views/profileLogo.html'
+import profileShopTpl from '../views/profileshop.html'
 import Backs from '../utils/back';
 
 const render = () => {
