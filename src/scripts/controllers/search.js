@@ -1,6 +1,6 @@
 import searchTpl from '../views/search.html'
 import homeCon from "./home"
-// import BScroll from '../../libs/bscroll.min.js'
+// import search from './searchsousuo'
 
 const render = () => {
   homeCon.render()
@@ -29,7 +29,7 @@ const myEvent = () => {
     $('.class-mid-right .content>div').eq($(this).index()).css('display', 'block').siblings().css('display', 'none')
   })
   $('.search').on('tap', function () {
-    
+    location.hash = "#searchsousuo"
   })
 }
 
