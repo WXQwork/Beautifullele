@@ -16,6 +16,54 @@ const render = async ()=>{
         location.href = "?id="+shopId+"#details"
     })
     scroll()
+
+    //切换风格
+    $('.cutStyle').on("tap",function(){
+        if($('main').attr("class")=='mainStyle1'){
+            $(this).html("&#xe658;")
+            $('main').attr("class","mainStyle2")
+        }else if($('main').attr("class")=='mainStyle2'){
+            $(this).html("&#xe62e;")
+            $('main').attr("class","mainStyle1")
+        }
+    })
+
+    //价格升降排序
+    $(".priceUp").on("tap",function(){
+        $(".priceUp").attr("data-click","true")
+        $(".priceUp").css("color","#dd2727")
+        $(".priceDown").css("color","#666")
+        $(".priceUp").parent().siblings().css("color","#dd2727")
+        $(".priceDown").removeAttr("data-click")
+        let list = datasource.sort(compareUp("show_price"));
+        renderNewgoods(list);
+    })
+    $(".priceDown").on("tap",function(){
+        $(".priceDown").attr("data-click","true")
+        $(".priceUp").css("color","#666")
+        $(".priceDown").css("color","#dd2727")
+        $(".priceUp").removeAttr("data-click")
+        let list = datasource.sort(compareDown("show_price"));
+        renderNewgoods(list);
+    })
+}
+
+//升序
+const compareUp = (attr)=>{
+    return (a,b)=>{
+        var value1 = a[attr]
+        var value2 = b[attr]
+        return value1-value2
+    }
+}
+
+//降序
+const compareDown = (attr)=>{
+    return (a,b)=>{
+        var value1 = a[attr]
+        var value2 = b[attr]
+        return value2-value1
+    }
 }
 
 const renderNewgoods = async (list)=>{
@@ -32,27 +80,37 @@ const scroll = ()=>{
 
     newScroll.on("scroll",function(){
         let top = this.y,
-            maxY = this.maxScrollY - top;
+            maxY = this.maxScrollY - top
+        // let ceil = $(".ceiling")
+        //     $(".ceiling").remove()
+        //     console.log(ceil)
+            // $("#root").append().attr("id","fixed-top")
         
     })
     newScroll.on("scrollEnd",async function(){
         let top = this.y,
             maxY = this.maxScrollY - top;
-            console.log(this,this.maxScrollY)
             if(maxY >= 0){
                 let result1 = (JSON.parse(await newGoodsModel.loadmore(++num))).goods_list;
                 let list = datasource = [
                     ...datasource,
                     ...result1
                 ]
-                console.log(list)
                 await renderNewgoods(list)
                 this.refresh()
-                this.scroll.scrollTo(0,this.maxScrollY)
+            }
+            if( $(".priceUp").attr("data-click")){
+                let list = datasource.sort(compareUp("show_price"));
+                renderNewgoods(list);
+            }else if($(".priceDown").attr("data-click")){
+                let list = datasource.sort(compareDown("show_price"));
+                renderNewgoods(list);
+            }else if(!($(".priceUp").attr("data-click")&&$(".priceDown").attr("data-click"))){
+                let list = datasource.sort(function(){return 0.5-Math.random()});
+                renderNewgoods(list);
             }
     })
 }
-
 
 export default {
     render
