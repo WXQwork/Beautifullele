@@ -99,6 +99,8 @@ const render = async ()=>{
                 })
             }
         }
+        let list = datasource.sort(function(){return 0.5-Math.random()});
+        renderNewgoods(list);
     })
 }
 
