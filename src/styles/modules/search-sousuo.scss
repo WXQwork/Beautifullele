@@ -1,3 +1,57 @@
 .root {
-    
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: #ffffff;
+    .head {
+        width: 100%;
+        height: 0.52rem;
+        background: #ffffff;
+        padding: 0.08rem 0 0.08rem 0.11rem;
+        @include border(1px 0 0 0, #b2b2b2, solid);
+        @include flexbox();
+        .search-wrap {
+            @include flexbox();
+            @include border(1px, #c7c7c7, solid, 0.05rem);
+            width: 3.14rem;
+            height: 0.32rem;
+            line-height: 0.32rem;
+            padding: 0 0 0 0.09rem;
+            .search-ipt {
+                width: 2.69rem;
+                font-size: 0.15rem;
+                color: #666666;
+                input {
+                    width: 2.6rem;
+                    height: 0.32rem;
+                    border: none;
+                }
+            }
+            .search-icon {
+                width: 0.45rem;
+                height: 0.32rem;
+                line-height: 0.32rem;
+                background: #f0f0f0;
+                text-align: center;
+                @include border(0 0 0 1px, #c7c7c7, solid);
+            }
+        }
+        .btn {
+            width: 0.48rem;
+            font-size: 0.17rem;
+            line-height: 0.36rem;
+            color: #999999;
+            text-align: center;
+        }
+    }
+    .info {
+        width: 100%;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        background: #ebebeb;
+        color: #999999;
+        font-size: 0.14rem;
+        padding: 0 0 0 0.16rem;
+        @include border(0 0 0 1px, #d8d8d8, solid);
+    }
 }
