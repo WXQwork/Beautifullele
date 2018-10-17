@@ -53,7 +53,7 @@ const gocar = (data)=>{
                             content: '加入购物车成功，是否立即查看？'
                             ,btn: ['立即前往', '继续逛逛']
                             ,yes: function(index){
-                               location.hash="#profile"
+                               location.href="#profile"
                                layer.close(index);
                             }
                           });
