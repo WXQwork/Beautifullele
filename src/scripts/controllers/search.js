@@ -28,6 +28,9 @@ const myEvent = () => {
     $(this).addClass('current').siblings().removeClass('current')
     $('.class-mid-right .content>div').eq($(this).index()).css('display', 'block').siblings().css('display', 'none')
   })
+  $('.search').on('tap', function () {
+    
+  })
 }
 
 export default {
