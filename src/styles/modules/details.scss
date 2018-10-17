@@ -6,8 +6,18 @@
     @include justify-content(space-around);
     text-align: center;
     line-height: .44rem;
-    &>span{
+    &>span:nth-child(1){
         font-size: .24rem;
+        color:#333;
+        font-weight: 800;
+    }
+    &>span:nth-child(3){
+        font-size: .2rem;
+        color:#333;
+        font-weight: 800;
+    }
+    &>span:nth-child(4){
+        font-size: .26rem;
         color:#333;
         font-weight: 800;
     }
@@ -307,6 +317,10 @@ footer{
             line-height: .22rem;
             border-right:1px solid #d6d6d6;
 
+            &>i{
+                font-size: .2rem;
+                color:#ccc;
+            }
         }
         &>li:nth-child(3){
             width:30%;

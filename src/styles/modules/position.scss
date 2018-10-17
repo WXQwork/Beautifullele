@@ -109,7 +109,7 @@
                 margin-bottom: 0.11rem;
                 position: relative;
                 span{
-                  background: #dcb687;
+                  // background: #dcb687;
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -282,6 +282,20 @@
             left: 0;
             width: 100%;
             height: 0.22rem;
+            .swiper-pagination-bullet{
+              width:0.16rem;
+              height: 0.0175rem;
+              background:#ccc !important;
+              @include border-radius(0);
+              opacity: 0.5;
+            }
+            .swiper-pagination-bullet-active{
+              width:0.16rem;
+              height: 0.03rem;
+              @include border-radius(0);
+              background:#c81c28 !important;
+              opacity: 1;
+            }
           }
           .swiper-wrapper{
             position: absulute;
@@ -391,6 +405,20 @@
             left: 0;
             width: 100%;
             height: 0.22rem;
+            .swiper-pagination-bullet{
+              width:0.16rem;
+              height: 0.0175rem;
+              background:#ccc !important;
+              @include border-radius(0);
+              opacity: 0.5;
+            }
+            .swiper-pagination-bullet-active{
+              width:0.16rem;
+              height: 0.03rem;
+              @include border-radius(0);
+              background:#c81c28 !important;
+              opacity: 1;
+            }
           }
           .swiper-wrapper{
             position: absulute;
