@@ -5,6 +5,9 @@ import Backs from '../utils/back';
 
 var datasource = []
 var num = 2
+var priceInter=0;
+var min=0;
+var max=0;
 
 const render = async ()=>{
     $('#root').html(newGoodsTpl)
@@ -46,6 +49,57 @@ const render = async ()=>{
         let list = datasource.sort(compareDown("show_price"));
         renderNewgoods(list);
     })
+
+    //筛选
+    $(".filterP").on("tap",function(){
+        $(".mask").css("display","flex")
+        $(".dispaly").on("tap",function(){
+            $(".mask").css("display","none")
+        })
+    })
+    $(".interval span").on("tap",function(){
+       
+        $(this).css({
+            border:"1px solid #da0000",
+            color:"#da0000",
+            background:"#fff"
+        })
+        $(this).attr("data-interval","true")
+        $(this).siblings().css({
+            border:"1px solid #f5f5f5",
+            color:"#666",
+            background:"#f5f5f5"
+        })
+        $(this).siblings().removeAttr("data-interval")
+
+        priceInter = $(this).html();
+        min = parseInt(priceInter.split("-")[0]);
+        max = parseInt(priceInter.split("-")[1])
+    })
+    $(".sure").on("tap",function(){
+        var list = [];
+        if(priceInter && priceInter!=NaN){
+            for(var i=0;i<datasource.length;i++){
+                if(datasource[i]["show_price"] <= max && datasource[i]["show_price"] >= min){
+                    list.push(datasource[i])
+                    console.log(list)
+                    renderNewgoods(list);
+                }
+            }
+        }
+    })
+    $(".resize").on("tap",function(){
+        for(var i=0;i<3;i++){
+            if($(".interval span").eq(i).attr("data-interval")){
+                $(".interval span").eq(i).removeAttr("data-interval")
+                $(".interval span").eq(i).css({
+                    border:"1px solid #f5f5f5",
+                    color:"#666",
+                    background:"#f5f5f5"
+                })
+            }
+        }
+    })
 }
 
 //升序
@@ -81,10 +135,15 @@ const scroll = ()=>{
     newScroll.on("scroll",function(){
         let top = this.y,
             maxY = this.maxScrollY - top
-        // let ceil = $(".ceiling")
-        //     $(".ceiling").remove()
-        //     console.log(ceil)
-            // $("#root").append().attr("id","fixed-top")
+            if(top <= -84){
+                $("#root").before($(".ceiling"))
+                $(".ceiling").attr("id","fixed-top")
+                $(".ceiling").attr("class","ceiling1")
+            }else if(top > -84){
+                $("main").before($(".ceiling1"))
+                $(".ceiling1").removeAttr("id")
+                $(".ceiling1").attr("class","ceiling")
+            }
         
     })
     newScroll.on("scrollEnd",async function(){
@@ -98,16 +157,16 @@ const scroll = ()=>{
                 ]
                 await renderNewgoods(list)
                 this.refresh()
-            }
-            if( $(".priceUp").attr("data-click")){
-                let list = datasource.sort(compareUp("show_price"));
-                renderNewgoods(list);
-            }else if($(".priceDown").attr("data-click")){
-                let list = datasource.sort(compareDown("show_price"));
-                renderNewgoods(list);
-            }else if(!($(".priceUp").attr("data-click")&&$(".priceDown").attr("data-click"))){
-                let list = datasource.sort(function(){return 0.5-Math.random()});
-                renderNewgoods(list);
+                if( $(".priceUp").attr("data-click")){
+                    let list = datasource.sort(compareUp("show_price"));
+                    renderNewgoods(list);
+                }else if($(".priceDown").attr("data-click")){
+                    let list = datasource.sort(compareDown("show_price"));
+                    renderNewgoods(list);
+                }else if(!($(".priceUp").attr("data-click")&&$(".priceDown").attr("data-click"))){
+                    let list = datasource.sort(function(){return 0.5-Math.random()});
+                    renderNewgoods(list);
+                }
             }
     })
 }
