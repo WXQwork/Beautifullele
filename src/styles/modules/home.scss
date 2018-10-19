@@ -11,6 +11,8 @@
   url('/iconfonts/iconfont.svg#iconfont') format('svg');
 }
 
+
+
 .home-container {
     height: 100%;
     @include flexbox();
@@ -114,10 +116,25 @@
       height: 100%;
     }
     .navfooter {
+      position: relative;
       height: .57rem;
       background: #fff;
       // border-top: solid 1px #ccc;
       @include border(1px 0 0 0);
+      .top{
+        opacity: 0;
+        background: #FFF;
+        position: absolute;
+        bottom: 0.8rem;
+        left: 87%;
+        width: 0.35rem;
+        height: 0.35rem;
+        @include border-radius(50%);
+        // @include border(1px solid #e5e5e5);
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+      }
       ul {
         height: 100%;
         @include flexbox();
@@ -143,4 +160,6 @@
         }
       }
     }
+    
+   
   }

@@ -16,7 +16,7 @@ const render =async () => {
   clickList();
 }
 const clickList = ()=>{
-  console.log($(".position_guess_div_con"));
+  // console.log($(".position_guess_div_con"));
   $(".position_guess_div_con").on("tap",function (){
     var id = $(this).attr("id");
     location.href="http://localhost:7777/?id="+id;
@@ -51,50 +51,55 @@ const conStyle =(con_name) => {
         $(this).children().eq(0).children().eq(0).css("background", "#dcb687");
         let lastTime = d.getTime() - start;
         // console.log(i)
-        countDown(lastTime, $(this),i);
+        countDown(-lastTime, $(this),i);
      
       }
     } else {
+
       $(this).children().eq(0).children().eq(0).text("已结束");
       $(this).children().eq(0).children().eq(0).css("background", "#aaa");
       $(this).children().eq(1).children().eq(0).text("已结束");
       $(this).children().eq(1).children().eq(0).css("background", "#aaa");
+      let lastTime = end - d.getTime();
+      countDown(lastTime, $(this),i);
     }
   });
 
 }
 
-async function  countDown(time, _this,i) {
-  let _time = time
-  _this.timer = null;
-  // console.log(i)
+function  countDown(time, thiscon,i) {
 
-  _this.timer =await (  setInterval(function () {
+  // let _time = time;
+  //  _this = this;
+ let timer = null;
+  // console.log(time)
+
+ timer = setInterval(function () {
     // console.log(i)
     
-    if (_time > 0) {
+    if (time > 0) {
       // let day=0;
       // let hour=0;
       // let minute=0;
       // let second=0;//时间默认值
-     let day = Math.floor(_time / (24 * 60 * 60 * 1000));
-     let hour = Math.floor(_time % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
-     let minute = Math.floor(_time % (24 * 60 * 60 * 1000) % (60 * 60 * 1000) / (60 * 1000));
-     let second = Math.floor((_time % (24 * 60 * 60 * 1000) % (60 * 60 * 1000) % (60 * 1000) / 1000));
+     let day = Math.floor(time / (24 * 60 * 60 * 1000));
+     let hour = Math.floor(time % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+     let minute = Math.floor(time % (24 * 60 * 60 * 1000) % (60 * 60 * 1000) / (60 * 1000));
+     let second = Math.floor((time % (24 * 60 * 60 * 1000) % (60 * 60 * 1000) % (60 * 1000) / 1000));
     if (day <= 9) day = '0' + day;
     if (hour <= 9) hour = '0' + hour;
     if (minute <= 9) minute = '0' + minute;
     if (second <= 9) second = '0' + second;
     //
     // console.log(day + "天:" + hour + "小时：" + minute + "分钟：" + second + "秒");
-    _time = _time - 1000;
-    _this.children().eq(1).children().eq(0).text("仅剩" + day + "天" + hour +
+    time = time - 1000;
+    thiscon.children().eq(1).children().eq(0).text("仅剩" + day + "天" + hour +
       ":" + minute + ":" + second);
     }
 
-  }, 1000))
+  }, 1000)
   if (time <= 0) {
-    clearInterval(_this.timer);
+    clearInterval(timer);
   }
 }
 
