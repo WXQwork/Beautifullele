@@ -1,5 +1,5 @@
 {{#each obj}}
-<div class="mll-list">
+<div class="mll-list" data-iid="{{iid}}">
     <div class=""></div>
     <div class="mll-main-list">
         <div class="td1">
@@ -12,10 +12,10 @@
             <div class="td-1">{{tit}}</div>
             <span class="td-2">¥{{price}}.00</span>
             <div class="td-3">
-                <span>-</span>
+                <span class="rem">-</span>
                 <input type="text" value="{{num}}">
-                <span>+</span>
-                <i class="yo-ico">&#xe645;</i>
+                <span class="add">+</span>
+                <i class="yo-ico remall">&#xe645;</i>
             </div>
         </div>
     </div>

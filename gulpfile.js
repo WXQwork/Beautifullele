@@ -101,6 +101,10 @@ gulp.task("server",()=>{
                     target: 'http://localhost:8888',
                     changeOrigin: true
                 }),
+                proxy('/change', {
+                    target: 'http://localhost:8888',
+                    changeOrigin: true
+                }),
                 proxy("/mob_api",{
                     target:"https://m.meilele.com/",
                     changeOrigin:true
