@@ -6,6 +6,7 @@ import Backs from '../utils/back';
 
 const render = () => {
   $('#root').html(ContentTel)
+  changeTab()
   if (sessionStorage.getItem("ID")) {
     userlist()
   } else {
@@ -18,6 +19,14 @@ const render = () => {
     })
   }
   new Backs(".laye-back i").init()
+}
+
+const changeTab =()=>{
+  $(".navfooter li").on("tap",function(){
+      let hashs = ['#position', '#search', '#profile','#admin']
+      location.hash = hashs[$(this).index()]
+      $(this).addClass('active').siblings().removeClass('active')
+  })
 }
 
 const userlist = () => {

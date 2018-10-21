@@ -5,6 +5,10 @@ import Backs from '../utils/back';
 
 const render = async ()=>{
     $("#root").html(detailTpl);
+    $("#letgo").on("tap",()=>{
+        console.log(111)
+        location.hash="#profile"
+      })
     new Backs(".goback1").init()
     scroll();
     var goodId = location.href.split("?")[1].split("#")[0].split("=")[1]

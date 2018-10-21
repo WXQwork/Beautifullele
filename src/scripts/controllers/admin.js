@@ -6,6 +6,7 @@ import Backs from '../utils/back';
 const render = ()=>{
     if(sessionStorage.getItem("ID")){
         $('#root').html(ContentTel)
+        changeTab()
         $(".laye-middle").html("我的美乐乐")
         $(".mll-main").html(adminLogoTpl)
         $(".mll-user-name").html("mll_"+sessionStorage.getItem("ID"))
@@ -21,6 +22,14 @@ const render = ()=>{
         adblur()
     }
 }
+
+const changeTab =()=>{
+    $(".navfooter li").on("tap",function(){
+        let hashs = ['#position', '#search', '#profile','#admin']
+        location.hash = hashs[$(this).index()]
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+  }
 
 const adclick = ()=>{
     $(".ad-attr span").on("tap",()=>{

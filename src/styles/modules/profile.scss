@@ -222,5 +222,35 @@
                 }
             }
         }
+        .navfooter {
+            height: .57rem;
+            background: #fff;
+            // border-top: solid 1px #ccc;
+            @include border(1px 0 0 0);
+            ul {
+              height: 100%;
+              @include flexbox();
+              li {
+                @include flex();
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+                @include flex-direction(column);
+                font-size: .18rem;
+                color:#333;
+                b {
+                  font-weight: 100;
+                  font-size: .13rem;
+                  color: #333;
+                }
+                &.active {
+                  color: #c81c28;
+                  b{
+                    color: #c81c28;
+                  }
+                }
+              }
+            }
+          }
     }
 }
